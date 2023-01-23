@@ -14,6 +14,9 @@ if ( !empty( $_REQUEST['full_name'] ) && !empty( $_REQUEST['email'] ) ) {
 		exit;
 	}
 	
+	/**
+	 * Input sanitization
+	 */
 	$full_name = htmlentities($_REQUEST['full_name'], ENT_QUOTES, 'UTF-8');
 	$village   = isset( $_REQUEST['village'] ) ? htmlentities($_REQUEST['village'], ENT_QUOTES, 'UTF-8') : '';
 
