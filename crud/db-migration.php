@@ -18,4 +18,6 @@ $result = $connection_db->query( $servay_db_create_query );
 
 if ( !$result ) {
     printf( "Could not create table: %s<br />", $connection_db->error );
+} else {
+	print_r( "DB migration run successfully" );
 }
